@@ -1,0 +1,245 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 9, 2023, 7:36:12 PM
+    Author     : A V I A N
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body{
+    overflow-x: hidden;
+}
+.container1{
+    width: 100%;
+    height: 30vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('image/cover.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.header{
+	width: 100%;
+	background-color: #a6145a;
+}
+.header ul{
+	text-align: center;
+}
+.header ul li{
+	list-style: none;
+	display:inline-block;
+}
+.header ul li{
+    padding-left: 5px;
+}
+.header ul li a{
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #EEE2DC;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 600;
+	padding: 24px;
+	transition: all ease 0.5s;
+}
+.header ul li ul.dropdown li {
+    display: block;
+}
+.header ul li ul.dropdown {
+    width: 12.4%;
+    background: #a6145a;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.header ul li a:hover{
+	background-color: #123C69;
+}
+.header ul li:hover ul.dropdown{
+    display: block;
+}
+.cart ion-icon{
+    vertical-align: bottom;
+    font-size: 22px;
+    padding-right: 5px;
+}
+.cart a{
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.cart a:hover, .cart a:focus, .cart a:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.row{
+    display: flex;
+    height: 90%;
+    width: 50%;
+    align-items: center;
+}
+.titel{
+    flex-basis: 50%;
+}
+h1{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container,
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+.image{
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.add-cart{
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    background-color: #387dff;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* ----------------- CART PAGE --------------- */
+
+.products-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.products-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+.product-title{
+    font-size: 15px;
+    width: 45%;
+}
+.price{
+    width: 15%;
+    border-bottom: 1px solid lightgray;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.total{
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+.product ion-icon{
+    cursor: pointer;
+}
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.products img{
+    width: 75px;
+}
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0;
+}
+.basketTotalTitel{
+    width: 30%;
+}
+.basketTotal{
+    font-size: 18px;
+    width: 10%;
+}
+
+@media(max-width: 500px) {
+    nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;;
+    }
+
+    .sm-hide {
+        display: none;;
+    }
+
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+
+    .basketTotalContainer {
+        padding-right: 8%;
+    }
+}
