@@ -27,7 +27,7 @@
                 </li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Admin</a></li>
+                <li><a href="adminLogin.jsp">Admin</a></li>
                 <li class="cart"><a href="customerLogin.jsp"><ion-icon name="cart"></ion-icon><span>0</span></a></li>
             </ul>
         </div>

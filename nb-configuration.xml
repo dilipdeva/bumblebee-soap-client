@@ -16,5 +16,8 @@ Any value defined here will override the pom.xml file value but is only applicab
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>1.7-web</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>gfv3ee6</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
         <org-netbeans-modules-maven-jaxws._5f_C_5f_StudentService>http://localhost:8080/Soap-Service/StudentService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_StudentService>
+        <org-netbeans-modules-maven-jaxws._5f_C_5f_CustomerService>http://localhost:8080/Soap-Service/CustomerService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_CustomerService>
+        <org-netbeans-modules-maven-jaxws._5f_C_5f_AdminsService>http://localhost:8080/Soap-Service/AdminsService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_AdminsService>
+        <org-netbeans-modules-maven-jaxws._5f_C_5f_OrderService>http://localhost:8080/Soap-Service/OrderService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_OrderService>
     </properties>
 </project-shared-configuration>

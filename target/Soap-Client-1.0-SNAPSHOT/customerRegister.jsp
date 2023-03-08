@@ -15,16 +15,18 @@
     <body>
         <div class="wrapper">
         <h1>Sign Up</h1>
-        <form action="#">
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="ID" required>
-            <input type="password" placeholder="Password" required>
-        </form>
-        <button>Sign Up</button>
+        <form action="Customer_Register_Servelt" method="post">
+            <input type="text" placeholder="ID" name="id" required>
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+        
+        <br>
+        <input type="Submit" value="Register Now">
         <div class="member">
             Already a member?<a href="customerLogin.jsp"> Log In Here</a>
         </div>
+        </form>
         </div>
     </body>
 </html>

@@ -66,7 +66,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.6</version>
+                <version>2.5</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -91,7 +91,7 @@
             <plugin>
                 <groupId>org.jvnet.jax-ws-commons</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.3.1-b20150201.1248</version>
                 <executions>
                     <execution>
                         <goals>
@@ -109,6 +109,60 @@
                             <staleFile>${project.build.directory}/jaxws/stale/StudentService.stale</staleFile>
                         </configuration>
                         <id>wsimport-generate-StudentService</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlFiles>
+                                <wsdlFile>localhost_8080/Soap-Service/CustomerService.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <packageName></packageName>
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                            <wsdlLocation>http://localhost:8080/Soap-Service/CustomerService?wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/CustomerService.stale</staleFile>
+                        </configuration>
+                        <id>wsimport-generate-CustomerService</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlFiles>
+                                <wsdlFile>localhost_8080/Soap-Service/AdminsService.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <packageName></packageName>
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                            <wsdlLocation>http://localhost:8080/Soap-Service/AdminsService?wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/AdminsService.stale</staleFile>
+                        </configuration>
+                        <id>wsimport-generate-AdminsService</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlFiles>
+                                <wsdlFile>localhost_8080/Soap-Service/OrderService.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <packageName></packageName>
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                            <wsdlLocation>http://localhost:8080/Soap-Service/OrderService?wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/OrderService.stale</staleFile>
+                        </configuration>
+                        <id>wsimport-generate-OrderService</id>
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>
