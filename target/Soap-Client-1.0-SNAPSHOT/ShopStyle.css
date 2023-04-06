@@ -243,3 +243,13 @@ h1{
         padding-right: 8%;
     }
 }
+#btns{
+    width: 120px;
+    margin-left: 35vw;
+    color: #000;
+    font-size: 16px;
+    padding: 12px 0;
+    background: #f0e130;
+    border: 0;
+    border-radius: 5px;
+}

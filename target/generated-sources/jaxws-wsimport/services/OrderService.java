@@ -39,4 +39,34 @@ public interface OrderService {
         @WebParam(name = "order", targetNamespace = "")
         Orders order);
 
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "deleteOrder", targetNamespace = "http://Services/", className = "services.DeleteOrder")
+    @ResponseWrapper(localName = "deleteOrderResponse", targetNamespace = "http://Services/", className = "services.DeleteOrderResponse")
+    @Action(input = "http://Services/OrderService/deleteOrderRequest", output = "http://Services/OrderService/deleteOrderResponse")
+    public boolean deleteOrder(
+        @WebParam(name = "id", targetNamespace = "")
+        String id);
+
+    /**
+     * 
+     * @param order
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateOrders", targetNamespace = "http://Services/", className = "services.UpdateOrders")
+    @ResponseWrapper(localName = "updateOrdersResponse", targetNamespace = "http://Services/", className = "services.UpdateOrdersResponse")
+    @Action(input = "http://Services/OrderService/updateOrdersRequest", output = "http://Services/OrderService/updateOrdersResponse")
+    public boolean updateOrders(
+        @WebParam(name = "order", targetNamespace = "")
+        Orders order);
+
 }

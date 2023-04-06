@@ -53,7 +53,7 @@
             </div>
             <div class="buyNowButton">
                 <form action="Order.jsp">
-                    <input type="submit" value="Click" onclick="passvalues();"/>
+                    <input type="submit" id="btns" value="ORDER NOW" onclick="passvalues();"/>
                 </form>
             </div>
         </div>

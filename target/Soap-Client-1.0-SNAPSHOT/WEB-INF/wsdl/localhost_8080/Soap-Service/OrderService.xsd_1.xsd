@@ -4,6 +4,14 @@
 
 <xs:element name="customerOrderResponse" type="tns:customerOrderResponse"/>
 
+<xs:element name="deleteOrder" type="tns:deleteOrder"/>
+
+<xs:element name="deleteOrderResponse" type="tns:deleteOrderResponse"/>
+
+<xs:element name="updateOrders" type="tns:updateOrders"/>
+
+<xs:element name="updateOrdersResponse" type="tns:updateOrdersResponse"/>
+
 <xs:complexType name="customerOrder">
 <xs:sequence>
 <xs:element name="order" type="tns:orders" minOccurs="0"/>
@@ -24,6 +32,30 @@
 </xs:complexType>
 
 <xs:complexType name="customerOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteOrder">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateOrders">
+<xs:sequence>
+<xs:element name="order" type="tns:orders" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateOrdersResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>

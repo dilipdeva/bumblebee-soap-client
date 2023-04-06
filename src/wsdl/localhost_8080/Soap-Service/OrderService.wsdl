@@ -10,15 +10,53 @@
 <message name="customerOrderResponse">
 <part name="parameters" element="tns:customerOrderResponse"/>
 </message>
+<message name="deleteOrder">
+<part name="parameters" element="tns:deleteOrder"/>
+</message>
+<message name="deleteOrderResponse">
+<part name="parameters" element="tns:deleteOrderResponse"/>
+</message>
+<message name="updateOrders">
+<part name="parameters" element="tns:updateOrders"/>
+</message>
+<message name="updateOrdersResponse">
+<part name="parameters" element="tns:updateOrdersResponse"/>
+</message>
 <portType name="OrderService">
 <operation name="customerOrder">
 <input wsam:Action="http://Services/OrderService/customerOrderRequest" message="tns:customerOrder"/>
 <output wsam:Action="http://Services/OrderService/customerOrderResponse" message="tns:customerOrderResponse"/>
 </operation>
+<operation name="deleteOrder">
+<input wsam:Action="http://Services/OrderService/deleteOrderRequest" message="tns:deleteOrder"/>
+<output wsam:Action="http://Services/OrderService/deleteOrderResponse" message="tns:deleteOrderResponse"/>
+</operation>
+<operation name="updateOrders">
+<input wsam:Action="http://Services/OrderService/updateOrdersRequest" message="tns:updateOrders"/>
+<output wsam:Action="http://Services/OrderService/updateOrdersResponse" message="tns:updateOrdersResponse"/>
+</operation>
 </portType>
 <binding name="OrderServicePortBinding" type="tns:OrderService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="customerOrder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="deleteOrder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="updateOrders">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
