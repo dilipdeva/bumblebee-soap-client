@@ -19,7 +19,7 @@
             <input type="text" placeholder="ID" name="id" required>
             <input type="password" placeholder="Password" name="password" required>
         <br>
-        <input type="Submit" value="Register Now">
+        <input type="Submit" value="Login">
         </form>
         </div>
     </body>
